@@ -66,12 +66,6 @@ body {
     width: 100%;
     height: 100vh;
     font-family: var(--ff-main);
-
-    background-image: url(images/bg-pattern-top-mobile.svg),
-                      url(images/bg-pattern-bottom-mobile.svg);
-
-    background-repeat: no-repeat;
-    background-position: top left, bottom right;
 }
 
 .container {
@@ -83,12 +77,18 @@ body {
     width: 300px;
     padding: 10px;
 
+    background-image: url(images/bg-pattern-top-mobile.svg),
+                      url(images/bg-pattern-bottom-mobile.svg);
+
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
 }
 
 /* top left section */
 .top-left {
-  text-align: center;
   padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-left h1 {
@@ -183,11 +183,79 @@ body {
 
     display: grid;
     gap: 40px;
+
+    padding: 100px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 30px;
+  }
+
+  /* top-left -- desktop design */
+  .top-left {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .top-left h1 {
+    font-size: 48px;
+  }
+
+  /* top-right -- desktop design */
+  .top-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 375px;
+    height: 150px;
+  }
+
+  .top-right .flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: 30px;
+  }
+
+  #first-item {
+    position: relative;
+    left: 0px;
+  }
+
+  #second-item {
+    position: relative;
+    left: 30px;
+  }
+
+  #third-item {
+    position: relative;
+    left: 60px;
+  }
+
+  /* bottom-section -- desktop design */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 25px;
+  }
+
+  #first {
+    position: relative;
+    top: 0px;
+  }
+
+  #second {
+    position: relative;
+    top: 15px;
+  }
+
+  #third {
+    position: relative;
+    top: 30px;
   }
 }
